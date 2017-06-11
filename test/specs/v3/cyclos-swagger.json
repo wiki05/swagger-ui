@@ -2246,6 +2246,7 @@
         "description" : "Uploads a new temporary image. Those images can later be related to a new user registration or advertisement, so they will have images the beginning. Temporary images won't be immediately associated to the next registered entity, but each id must be explicitly associated on the `images` field.\nImages as guest can only be uploaded if on the destination group products the image profile field is allowed at registrations. Users may upload images if they can register new users or create advertisements.\n",
         "operationId" : "uploadTempImage",
         "produces" : [ "application/json", "text/plain" ],
+        "consumes" : ["multipart/form-data"],
         "parameters" : [ {
           "name" : "name",
           "in" : "query",
@@ -3104,6 +3105,7 @@
         "description" : "Uploads a new image for the given advertisement.\n",
         "operationId" : "uploadAdImage",
         "produces" : [ "application/json", "text/plain" ],
+        "consumes" : ["multipart/form-data"],
         "parameters" : [ {
           "name" : "id",
           "in" : "path",
@@ -9984,6 +9986,7 @@
         "description" : "Uploads a new image, either `profile` (by default)\nor `custom`, for the given user.\n",
         "operationId" : "uploadUserImage",
         "produces" : [ "application/json", "text/plain" ],
+        "consumes" : ["multipart/form-data"],
         "parameters" : [ {
           "name" : "user",
           "in" : "path",
